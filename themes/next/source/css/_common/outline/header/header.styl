@@ -2,13 +2,19 @@
 // --------------------------------------------------
 .header {
   background: $head-bg;
+  height: 67px
+  box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.1), 0 1px rgba(0,0,0,0.1);
+  background: #fafafa;
 }
 
 .header-inner {
+  height: 100%
   margin: 0 auto;
-  padding: 100px 0 70px;
+  padding: 0px 0 0px;
   position: relative;
   width: $content-desktop;
+  display :flex;
+  flex-direction:row;
 
   +desktop-large() {
     .container & {
