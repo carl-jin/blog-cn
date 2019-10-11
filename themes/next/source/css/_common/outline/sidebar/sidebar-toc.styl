@@ -17,14 +17,15 @@
     }
 
     a {
-      the-transition();
+      //the-transition();
+      border:none !important;
       border-bottom-color: $toc-link-border-color;
-      color: $toc-link-color;
+      color: $sidebar-nav-color;
       transition-property: all;
 
       &:hover {
-        border-bottom-color: $toc-link-hover-border-color;
-        color: $toc-link-hover-color;
+        text-decoration underline !important;
+        color: $sidebar-nav-color;
       }
     }
   }
@@ -58,15 +59,14 @@
     }
 
     .active > a {
-      border-bottom-color: $toc-link-active-border-color;
-      color: $toc-link-active-color;
+      //border-bottom-color: $toc-link-active-border-color;
+      color: $black-deep;
     }
 
     .active-current > a {
-      color: $toc-link-active-current-color;
+      color: $black-deep;
 
       &:hover {
-        color: $toc-link-active-current-border-color;
       }
     }
   }

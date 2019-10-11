@@ -12,6 +12,25 @@
     border: 0;
     margin-top: 2px;
     padding: 9px 10px;
+
+    &.site-nav-on{
+      span{
+        transform-origin center;
+        &:nth-of-type(2){
+          display none
+        }
+      }
+      span:first-of-type{
+        transform: rotate(-45deg);
+      }
+      span:last-of-type{
+        transform: rotate(45deg);
+      }
+
+      .btn-bar + .btn-bar{
+        margin-top: -2px !important;
+      }
+    }
   }
 }
 
