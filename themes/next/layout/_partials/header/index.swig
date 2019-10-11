@@ -16,4 +16,8 @@
   </div>
 {%- endif %}
 
+<div class="site-lang">
+  <span class="active" data-lang="cn">中文</span><span data-lang="en">English</span>
+</div>
+
 {{- next_inject('header') }}

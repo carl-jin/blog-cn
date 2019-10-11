@@ -16,6 +16,46 @@
   display :flex;
   flex-direction:row;
 
+  .site-lang{
+    position :absolute;
+    right 0
+    top 0
+    bottom: 0
+    display flex
+    flex-direction row
+    align-items center
+
+    span{
+      cursor: pointer;
+      font-size 14px
+      display block
+      &:first-of-type{
+        margin-right: 16px;
+        position relative
+        &::after{
+          display block
+          content:''
+          height 14px
+          width: 2px
+          background $black-deep
+          transform-origin center
+          transform rotate(25deg)
+          position absolute
+          right: -8px;
+          top: 7px;
+        }
+      }
+
+      &.active{
+        color: $black-deep
+      }
+
+      &:hover{
+        text-decoration underline
+      }
+    }
+  }
+
   +desktop-large() {
     .container & {
       width: $content-desktop-large;

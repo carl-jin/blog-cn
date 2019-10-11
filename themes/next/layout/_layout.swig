@@ -75,5 +75,17 @@
   {%- if theme.pjax %}
     </div>
   {%- endif %}
+
+  <script>
+    [].slice.call(document.querySelectorAll('.header-inner .site-lang span')).map(el=>{
+      el.addEventListener('click',function(){
+        if( this.dataset.lang === 'cn'){
+          window.location.href = 'https://carljin.com'  + window.location.pathname
+        }else{
+          window.location.href = 'https://en.carljin.com'  + window.location.pathname
+        }
+      })
+    })
+  </script>
 </body>
 </html>

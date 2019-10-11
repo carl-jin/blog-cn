@@ -83,3 +83,8 @@ theme: next
 #deploy:
 #  type: git
 #  repo: https://github.com/carl-jin/blog.git
+
+sitemap:
+  path: sitemap.xml
+  tag: false
+  category: false
