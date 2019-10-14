@@ -9,9 +9,7 @@ tags:
   - Github Pages
 categories:
   - blog
-featured_image: thumbnail.png
-thumbnail: thumbnail.png
-description: 想拥有一个属于自己的静态博客? 只需要跟着一下步骤你将在10分钟内拥有属于自己的静态博客.
+description: 想拥有一个属于自己的静态博客? 只需要跟着以下步骤你将在10分钟内拥有属于自己的静态博客.
 ---
 
 ![Imgur](https://i.imgur.com/0mQ4qvU.png)
@@ -125,7 +123,7 @@ dns4.p02.nsone.net
 
 #   如何更新blog?
 如果要修改的Blog(添加新文章,调整样式,换主题)之类的,只需要在本地的`blog`目录修改好后,
-提交到执行一下命令提交到`github`上后,Netlify会把新更新的内容自动部署上!
+提交到执行以下命令提交到`github`上后,Netlify会把新更新的内容自动部署上!
 ```bash
 git add .
 git commit -m "你这次提交的描述"
