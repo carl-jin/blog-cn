@@ -158,4 +158,4 @@ new_im.save('output.png')
 ```
 
 #   总结
-ffmpeg 还是很强大的视频处理功能库. 以上只是个人常用命令, 如果也想贡献命令, 请到这里提交合并!
+ffmpeg 还是很强大的视频处理功能库. 以上只是个人常用命令, 如果也想贡献命令, 请到这里[提交合并](https://github.com/carl-jin/blog-cn/blob/master/source/_posts/ffmepg-combine.md)!
