@@ -4,7 +4,7 @@ date: 2019-10-13 19:40:16
 tags:
   - ffmpeg
 categories:
-  - ffmpeg
+  - python
 description: FFMPEG是特别强大的专门用于处理视频的开源库。你既可以使用它的API对视频进行处理，也可以使用它提供的工具，如 ffmpeg, ffplay, ffprobe，来编辑你的视频文件。本文将介绍常用的ffmpeg命令.
 ---
 
