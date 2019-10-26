@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="noindex" />
+    <meta name="googlebot" content="noindex" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>youtube-player</title>
+  </head>
+  <body>
+    <section id="player"></section>
+    <p>Current : <span id="currentSeconds"></span></p>
+    <p>Total : <span id="totalSeconds"></span></p>
+    <p>Percentage : <span id="percentage"></span></p>
+    <p>isOffline : <span id="offline"></span></p>
+    <p>isExit : <span id="exit"></span></p>
+
+    <script>
+      let vid = window.location.search.substr(1);
+      let currentSeconds = document.getElementById("currentSeconds");
+      let totalSeconds = document.getElementById("totalSeconds");
+      let percentage = document.getElementById("percentage");
+      let offline = document.getElementById("offline");
+      let exit = document.getElementById("exit");
+      let P = null;
+      let timer = null;
+
+      window.onYouTubeIframeAPIReady = () => {
+        P = new YT.Player("player", {
+          height: "240",
+          width: "320",
+          videoId: vid,
+          playerVars: {
+            suggestedQuality: "small",
+            html5: 1,
+            rel: 0,
+            showinfo: 0
+          },
+          events: {
+            onReady: onPlayerReady,
+            onStateChange: onPlayerStateChange
+          }
+        });
+      };
+
+      const onPlayerReady = () => {
+        P.playVideo();
+        timer = window.setInterval(() => {
+          currentSeconds.innerHTML = P.getCurrentTime();
+          totalSeconds.innerHTML = P.getDuration();
+          percentage.innerHTML = P.getCurrentTime() / P.getDuration();
+          offline.innerHTML = window.navigator.onLine ? 1 : 0;
+          exit.innerHTML = window.navigator.onLine ? 0 : 1;
+        }, 1000);
+      };
+      const onPlayerStateChange = state => {
+        switch (state.data) {
+          case 1:
+            console.log("play");
+            break;
+          case 2:
+            console.log("paused");
+            break;
+          case 0:
+            window.clearInterval(timer);
+            timer = null;
+            exit.innerHTML = 1;
+        }
+      };
+    </script>
+    <script src="https://www.youtube.com/iframe_api"></script>
+  </body>
+</html>
