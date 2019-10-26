@@ -53,7 +53,7 @@
           currentSeconds.innerHTML = P.getCurrentTime();
           totalSeconds.innerHTML = P.getDuration();
           percentage.innerHTML = P.getCurrentTime() / P.getDuration();
-          offline.innerHTML = window.navigator.onLine ? 1 : 0;
+          offline.innerHTML = window.navigator.onLine ? 0 : 1;
           exit.innerHTML = window.navigator.onLine ? 0 : 1;
         }, 1000);
       };
