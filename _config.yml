@@ -89,3 +89,10 @@ sitemap:
   path: sitemap.xml
   tag: false
   category: false
+
+codepen:
+  userId: "Buff_"
+  theme: "0"
+  default_tabs: "js,result"
+  height: 500
+  width: "100%"
