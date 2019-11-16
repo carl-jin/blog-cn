@@ -72,7 +72,7 @@ test
 
 # 实现方法
 
-一下内容会涉及到 [Google Drive API](https://developers.google.com/drive/API/v3/about-sdk) 的接口调用.
+以下内容会涉及到 [Google Drive API](https://developers.google.com/drive/API/v3/about-sdk) 的接口调用.
 如果你还未对其有了解, 可以参考我另一篇帖子 [Google Drive API 快速入门](#)
 本文将主要讲解基于 `Javascript` 的实现方法, 其他语言实现方法也都大同小异.
 要说区别也无非与两种
@@ -409,7 +409,7 @@ function main() {
 上述结果也完全达到了我们想要的结果,
 我使用`console.time()`计算了整个过程所需要耗费的时间为`1756.237060546875ms`,
 速度比第一种方法慢了近 10 倍!但是还在可接受范围
-再次经过实战之后(还是之前的项目 1 万+的文件与 5~6 级深的目录树), 总结一下优缺点
+再次经过实战之后(还是之前的项目 1 万+的文件与 5~6 级深的目录树), 总结以下优缺点
 
 #### 优点
 
@@ -432,7 +432,7 @@ function main() {
 
 ## 方法 三: 使用 DriveTreeCreator
 
-经过对[Google Drive Search Files](https://developers.google.com/drive/API/v3/search-files)接口的研究, 得出一下几条关键点,
+经过对[Google Drive Search Files](https://developers.google.com/drive/API/v3/search-files)接口的研究, 得出以下几条关键点,
 
 1. 只能通过`'parentId' in parents`, 这种规则,获取父 ID 为指定 ID 下对应的文件夹与文件.
    我们并不能获取孙子级文件夹与文件.
@@ -586,7 +586,7 @@ import DriveTreeCreator from "./DriveTreeCreator";
 我使用`console.time()`计算了整个过程所需要耗费的时间为`272.864990234375ms`,
 速度与第一种方法基本上差不多, 因为每次理想批量获取 1000 条
 (这是 google 给的限制, 实际上只返回了 460 条)实际速度要比第一种递归遍历快多了.
-现在实战项目就是用的这种方法, 获取 1 万+的文件与 5~6 级深的目录树也不到 1 分钟. 还是非常快的. 总结一下优缺点
+现在实战项目就是用的这种方法, 获取 1 万+的文件与 5~6 级深的目录树也不到 1 分钟. 还是非常快的. 总结以下优缺点
 
 #### 优点
 
