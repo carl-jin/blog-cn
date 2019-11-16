@@ -17,7 +17,7 @@ description: 无法对文件进行病毒扫描 - Google Drive 大文件无法查
 # 准备工作
 
 本文将使用 [Google Drive V2 API](https://developers.google.com/drive/api/v2/),
-有同学可能要问了, Google Drive V3 API 不是一件出来了吗? 为什么还要用 V2?
+有同学可能要问了, Google Drive V3 API 不是已经出来了吗? 为什么还要用 V2?
 原因是 V3 API 接口未提供下文关键的 downloadUrl 字段, 只有 V2 接口才提供.
 首先我们要获取`clientId`与`APIKey`
 (当然下面是我做过修改的,你并不能直接用)关于如何获取 clientId 与 APIKey,
