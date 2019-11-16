@@ -33,7 +33,7 @@ Google Drive 中的 Folder 并不是真正意义上的 **Folder**,与我们常�
 
 # 准备工作
 
-本文将使用 [Google Drive V3 API](https://developers.google.com/drive/API/v3/), 
+本文将使用 [Google Drive V3 API](https://developers.google.com/drive/api/v3/), 
 官方现已提供`Java`,`Node.js`,`Python`与`Javascript`对应的实现库,
 在开始前我们需要获取`clientId`与`APIKey`大概长这个样子
 (当然下面是我做过修改的,你并不能直接用)关于如何获取 clientId 与 APIKey,
