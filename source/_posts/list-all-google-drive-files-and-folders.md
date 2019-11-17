@@ -10,7 +10,8 @@ description: 如何生成 Google Drive 的文件树? 本文将介绍几种实现
 ---
 
 # 快速入口
-如果你只是想快速获取Google Drive下指定文件夹的目录树, 对其实现方法与优缺点并无兴趣的话,
+
+如果你只是想快速获取 Google Drive 下指定文件夹的目录树, 对其实现方法与优缺点并无兴趣的话,
 直接用我的开源项目吧[https://github.com/carl-jin/DriveTreeCreator](https://github.com/carl-jin/DriveTreeCreator)
 
 # 引言
@@ -33,11 +34,11 @@ Google Drive 中的 Folder 并不是真正意义上的 **Folder**,与我们常�
 
 # 准备工作
 
-本文将使用 [Google Drive V3 API](https://developers.google.com/drive/api/v3/), 
+本文将使用 [Google Drive V3 API](https://developers.google.com/drive/api/v3/),
 官方现已提供`Java`,`Node.js`,`Python`与`Javascript`对应的实现库,
 在开始前我们需要获取`clientId`与`APIKey`大概长这个样子
 (当然下面是我做过修改的,你并不能直接用)关于如何获取 clientId 与 APIKey,
-可以参考我另一篇帖子[如何获取 Google Drive APIKey](#) 
+可以参考我另一篇帖子[如何获取 Google Drive API Key](https://carljin.com/how-to-enable-google-drive-api-and-get-client-credentials.html)
 
 ```javascript
 {
