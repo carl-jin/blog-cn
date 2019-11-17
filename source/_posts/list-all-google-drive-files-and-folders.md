@@ -66,7 +66,7 @@ test
 也就说我们需要通过`http://localhost:3000`去访问我们的测试文件,
 而不是`file:///C:***`, 这里我推荐直接用`Yeoman`的`Generator`即可,
 这里我使用的是[gulp-with-es6](https://github.com/carl-jin/generator-gulp-es6), 默认会以`localhost:3000`作为启动环境.
-关于如何使用`Yeoman`, 如果有兴趣也可以参考我的另一篇文章[Yeoman 安装与入门](#)
+关于如何使用`Yeoman`, 如果有兴趣也可以参考我的另一篇文章[Yeoman 安装与入门](https://carljin.com/getting-started-with-yeoman.html)
 此外 Google Drive API 因出于安全考虑, 对接口调用域名进行了限制, 我们需要在[Google Developers Console](https://console.developers.google.com/)中进行配置,
 如下图把你的测试域名, 添加上来即可, 这里我在本地`localhost:3000`做测试, 所以填写的是`http://localhost:3000`
 ![google drive console](https://i.imgur.com/ZLE2XZn.png)
