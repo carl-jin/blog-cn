@@ -117,7 +117,7 @@
       videos.forEach(el => {
         let vid = el.dataset.vid;
         let start = el.dataset.start;
-        let containerWidth = document.querySelector(".container").innerWidth;
+        let containerWidth = document.querySelector(".container").offsetWidth;
         let startString = start ? `?start=${start}` : "";
 
         el.innerHTML = `<iframe width="${containerWidth}" height="${containerWidth *
