@@ -2,6 +2,11 @@
 title: 如何在已经存在的 Vue 项目中添加 PWA 功能
 date: 2020-11-25 06:29:36
 tags:
+  - PWA
+  - VUE
+categories:
+  - blog
+description: 如何在已经存在的 Vue 项目中添加 PWA 功能
 ---
 
 # 如何在已经存在的 Vue 项目中添加 PWA 功能
