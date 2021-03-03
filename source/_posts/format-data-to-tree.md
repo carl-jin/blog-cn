@@ -1,9 +1,11 @@
 ---
-title: 格式化树状数据 date: 2021-03-03 14:06:33 tags:
-
-- front-end categories:
-- Front End description: 借鉴Vue AST 生成思路
-
+title: 格式化树状数据 
+date: 2021-03-03 14:06:33 
+tags:
+  - front-end 
+categories:
+  - Front End 
+description: 借鉴Vue AST 生成思路
 ---
 
 ### 假设有以下一组数据
