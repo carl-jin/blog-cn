@@ -1,5 +1,5 @@
 ---
-title: [翻译] 如何创建一个Chrome extension
+title: 翻译 如何创建一个Chrome extension
 date: 2021-03-12 07:11:14
 tags:
 - Google Extension
