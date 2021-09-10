@@ -2,6 +2,7 @@
 title: package.json 常用配置
 date: 2021-09-09 22:09:34
 tags:
+description: 本文将简单介绍package.json中常用的配置
 ---
 
 ## 配置
