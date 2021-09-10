@@ -2939,6 +2939,11 @@
   "resolved" "https://registry.npmjs.org/prepend-http/-/prepend-http-2.0.0.tgz"
   "version" "2.0.0"
 
+"prettier@^2.4.0":
+  "integrity" "sha512-DsEPLY1dE5HF3BxCRBmD4uYZ+5DCbvatnolqTqcxEgKVZnL2kUfyu7b8pPQ5+hTBkdhU9SLUmK0/pHb07RE4WQ=="
+  "resolved" "https://registry.npmjs.org/prettier/-/prettier-2.4.0.tgz"
+  "version" "2.4.0"
+
 "pretty-data@0.40.0":
   "integrity" "sha1-Vyqo6iNGdGerlLa1Jmpv2cj93XI="
   "resolved" "https://registry.npmjs.org/pretty-data/-/pretty-data-0.40.0.tgz"
