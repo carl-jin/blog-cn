@@ -5,6 +5,19 @@ tags:
   - vite
 description: 如何配置才能解决 UMD 在 Dev 和 Prod 环境中不同的引用行为？
 ---
+  
+## 小道
+如果使用 vite 打包后，运行 js 时遇到，诸如`require is not defined` `exports is not defined` 问题的话，请尝试一下配置
+
+```typescript
+build: {
+    commonjsOptions: {
+        transformMixedEsModules: true,
+    },
+}
+```
+
+> 如果以上配置未能解决你的问题的话，那么往往是因为你所引用的这些包，没有严格按照 UMD 或者 CMD 方式道出
 
 ** 如果你 Vite 打包后 UMD 引用报错的问题，请跳过介绍 **
 
