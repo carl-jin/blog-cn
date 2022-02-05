@@ -163,7 +163,7 @@ class App extends Subscribe<AppEvent> {
 declare type EventObj<T> = {
   [K in keyof T]: (...args: any) => void;
 };
-
+ 
 class Subscribe<T extends EventObj<T>> {
   private eventList: Partial<Record<keyof T, Array<T[keyof T]>>> = {};
 
