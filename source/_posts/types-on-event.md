@@ -1,9 +1,11 @@
 ---
-title: Typescript 在 Event 对象上的实践 date: 2022-02-05 12:47:04 tags:
-
-- Typescript categories:
-- Front End description: 如何使用 Typescript 实现一个订阅者模式？
-
+title: Typescript 在 Event 对象上的实践 
+date: 2022-02-05 12:47:04 
+tags:
+  - Typescript 
+categories:
+  - Front End 
+description: 如何使用 Typescript 实现一个订阅者模式？
 ---
 
 > 本文假设你已经有了 typescript 的基础知识
