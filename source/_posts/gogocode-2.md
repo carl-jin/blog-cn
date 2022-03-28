@@ -11,7 +11,7 @@ description: 本文主要记录一些 gogocode 的使用例子和遇到的坑 (�
 
 接着上一篇 [gogocode AST 抽象语法树修改器使用例子 (一)](/gogocode-1.html), 这次我们的场景是 Vuex 到 Pinia 的迁移
 
-本文的最终目的是按照 (Pinia 官方的迁移步骤)[https://pinia.vuejs.org/introduction.html#comparison-with-vuex-3-x-4-x] 进行将 `Vuex` 转换为 `pinia`
+本文的最终目的是按照 [Pinia 官方的迁移步骤](https://pinia.vuejs.org/introduction.html#comparison-with-vuex-3-x-4-x) 进行将 `Vuex` 转换为 `pinia`
 
 我们最终的目的是将下面的代码
 
@@ -73,8 +73,7 @@ const actions = {
   },
 };
 
-export const useCounterStore = defineStore({
-  id: "counter",
+export const useCounterStore = defineStore("test", {
   state: (): LocaleState => state,
   getters,
   actions,
@@ -82,6 +81,8 @@ export const useCounterStore = defineStore({
 ```
 
 因为转换内容比较多，我们需要拆分成多个步骤进行转换（其实是因为我技术不行，无法一次达到）
+
+实际操作过程并不是那么简单，因为代码规范不统一，不同的 store 经过不同的开发者编写，导致需要做很多兼容的地方
 
 ### 预处理部分
 
@@ -217,16 +218,6 @@ $source = deleteUnusedProp($, $source).root();
 $source = transformState($, $source).root();
 $source.root().generate();
 
-$source
-  //  ... 代码相同略过
-  //  转换 state
-  .find(`defineStore('test', $$$)`)
-  .each((item) => {
-    //    拆分步骤
-    transformState($, item, $source);
-  })
-  .root()
-  .generate();
 
 function transformState($, $source) {
   return $source.find(`defineStore('test', $$$)`).each((item) => {
@@ -296,7 +287,8 @@ function transformState($, $source) {
 
 转换后的效果
 
-> 没想到吧，转换个 state 既然那么复杂
+> 没想到吧，转换个 state 既然那么复杂, 这里我们兼顾了代码中各种写法，
+> state, state: initState, state:()=>state, state: function { return state }
 
 ```ts
 export const useTestStore = defineStore("test", {
