@@ -181,7 +181,6 @@ document.removeEventListener(
 ## ios 设备自定义滑块无法控制原生滚动条
 
 如下图我想通过这个按钮来快速滚动页面
-![https://i.imgur.com/N8Vw5tJ.jpg](https://i.imgur.com/N8Vw5tJ.jpg)
 查了一些资料，这种交互在 app 中比较常见，应用在网页中的没查到
 
 ##### 对应处理方法
