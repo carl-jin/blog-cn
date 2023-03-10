@@ -1,7 +1,7 @@
 ---
 title: Cannot read properties of undefined (reading 'suggestedVariableName')
 date: 2023-03-07 09:46:19
-tags:
+description: vite + vue 打包时报错 Cannot read properties of undefined (reading 'suggestedVariableName')
 ---
 
 # 记录一次错误处理
